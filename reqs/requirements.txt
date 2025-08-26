@@ -1,0 +1,10 @@
+codebleu==0.7.0
+datasets==4.0.0
+evaluate==0.4.5
+gradio==5.44.0
+huggingface_hub==0.34.4
+pandas==2.3.2
+peft==0.17.1
+torch==2.8.0.dev20250319+cu128
+transformers==4.55.4
+trl==0.21.0
