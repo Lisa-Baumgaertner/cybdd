@@ -27,10 +27,6 @@ def batch_inference(modelnaming):
     # set adapter
     adapter = "libaum/adapter-rank32-alpha128_final"
 
-    # get configuration from adapter
-    peft_configuration = PeftConfig.from_pretrained(adapter)
-
-
     # build qlora configuration for loading the pretrained model quantized
     bnb_config = BitsAndBytesConfig(
         load_in_4bit=True,
