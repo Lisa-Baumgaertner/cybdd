@@ -1,0 +1,150 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should be performed on the website "https://www.saucedemo.com/".
+The test should go to products page using href "/products" this should also be contained in the url and checked.
+Then the user chooses the first product and puts it into the cart data-product-id="1" and checks for visibility. 
+The cart modal confirmation is visible and the user chooses "Continue Shopping" button and chooses the second product data-product-id="2" and adds it to the cart.
+The cart modal confirmation is visible again and the user chooses "/view_cart" to navigate to the cart page.
+In the cart "product-1" should contain the text "Blue Top" and "product-2" should contain text "Men Tshirt".
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+
+home-page:
+
+<a href="/products"><i class="material-icons card_travel" style="font-size: 16px;"></i> Products</a>
+
+
+product-page:
+
+<a data-product-id="1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+
+
+confirmation-modal:
+
+<div id="cartModal" class="modal show">    
+   <button class="btn btn-success close-modal btn-block" data-dismiss="modal">Continue Shopping</button> 
+</div>
+
+
+product-page:
+
+<a data-product-id="2" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+
+
+confirmation-modal:
+
+<div id="cartModal" class="modal show">    
+   <a href="/view_cart"><u>View Cart</u></a> 
+</div>
+
+
+cart-page:
+
+<tr id="product-1">
+    <td class="cart_description">
+        <h4><a href="/product_details/1">Blue Top</a></h4>
+    </td>
+</tr>
+
+
+<tr id="product-2">
+    <td class="cart_description">
+        <h4><a href="/product_details/2">Men Tshirt</a></h4>
+    </td>
+</tr>
+
+
+
+
+{
+  "multi_page_html_contexts": [
+    {
+      "name": "home-page",
+      "elements": [
+        {
+          "type": "link",
+          "label": "Go to Products Page",
+          "selector_type": "href",
+          "selector": "/products",
+          "text": "Products"
+        }
+      ]
+    },
+    {
+      "name": "product-page",
+      "elements": [
+        {
+          "type": "link",
+          "label": "Add Blue Top to Cart",
+          "selector_type": "data-product-id",
+          "selector": "1",
+          "text": "Add to cart"
+        }
+      ]
+    },
+    {
+      "name": "confirmation-modal",
+      "elements": [
+        {
+          "type": "button",
+          "label": "Continue Shopping Button",
+          "selector_type": "data-dismiss",
+          "selector": "modal",
+          "text": "Continue Shopping"
+        }
+      ]
+    },
+    {
+      "name": "product-page",
+      "elements": [
+        {
+          "type": "link",
+          "label": "Add Men Tshirt to Cart",
+          "selector_type": "data-product-id",
+          "selector": "2",
+          "text": "Add to cart"
+        }
+      ]
+    },
+    {
+      "name": "confirmation-modal",
+      "elements": [
+        {
+          "type": "link",
+          "label": "View Cart",
+          "selector_type": "href",
+          "selector": "/view_cart",
+          "text": "View Cart"
+        }
+      ]
+    },
+    {
+      "name": "cart-page",
+      "elements": [
+        {
+          "type": "link",
+          "label": "Cart Item Blue Top",
+          "selector_type": "href",
+          "selector": "/product_details/1",
+          "text": "Blue Top"
+        },
+        {
+          "type": "link",
+          "label": "Cart Item Men Tshirt",
+          "selector_type": "href",
+          "selector": "/product_details/2",
+          "text": "Men Tshirt"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+

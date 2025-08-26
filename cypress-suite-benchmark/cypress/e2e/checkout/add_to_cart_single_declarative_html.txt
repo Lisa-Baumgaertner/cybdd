@@ -1,0 +1,101 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test add a product to cart, go to cart and check for the presence of the correct product in cart. 
+The test should visit the website "https://automationexercise.com/".
+The user should navigate to the page "/products" by using the href, then the user should choose the first visible product and add it to the cart.
+In the appearing cart modal the user should choose the href view cart. Then the user should check in the cart if the product with text "Bue Top" is present in the cart.
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+home-page:
+
+<a href="/products"><i class="material-icons card_travel" style="font-size: 16px;"></i> Products</a>
+
+
+<div class="single-products">
+    <div class="product-overlay">
+        <div class="overlay-content">
+            <h2>Rs. 500</h2>
+            <p>Blue Top</p>
+            <a data-product-id="1" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+        </div>
+    </div>
+</div>
+
+confirmation-modal:
+
+<div id="cartModal" class="modal show">    
+    <p class="text-center"><a href="/view_cart"><u>View Cart</u></a></p>
+</div>
+
+cart-page:
+
+<td class="cart_description">
+    <h4><a href="/product_details/1">Blue Top</a></h4>
+    <p>Women &gt; Tops</p>
+</td>
+
+
+[
+  {
+    "name": "home-page",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Products",
+        "selector_type": "href",
+        "selector": "/products",
+        "text": "Products"
+      },
+      {
+        "type": "link",
+        "label": "Add to cart",
+        "selector_type": "data-product-id",
+        "selector": "1",
+        "text": "Add to cart"
+      }
+    ]
+  },
+  {
+    "name": "confirmation-modal",
+    "elements": [
+      {
+        "type": "div",
+        "label": "Cart Modal Container",
+        "selector_type": "id",
+        "selector": "cartModal",
+        "text": ""
+      },
+      {
+        "type": "link",
+        "label": "View Cart",
+        "selector_type": "href",
+        "selector": "/view_cart",
+        "text": "View Cart"
+      }
+    ]
+  },
+  {
+    "name": "cart-page",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Cart Product Name",
+        "selector_type": "href",
+        "selector": "/product_details/1",
+        "text": "Blue Top"
+      },
+      {
+        "type": "p",
+        "label": "Cart Product Category",
+        "selector_type": "text",
+        "selector": "Women > Tops",
+        "text": "Women > Tops"
+      }
+    ]
+  }
+]

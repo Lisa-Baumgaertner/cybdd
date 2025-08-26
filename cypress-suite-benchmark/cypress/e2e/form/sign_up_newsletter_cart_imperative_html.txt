@@ -1,0 +1,69 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform sign up for newsletter from cart.
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+home-page:
+<a href="/view_cart"><i class="fa fa-shopping-cart"></i> Cart</a>
+
+cart:
+<footer id="footer">
+<div class="footer-widget">
+    <div class="single-widget">
+        <h2>Subscription</h2>
+        <form class="searchform" method="POST">
+            <input type="email" id="susbscribe_email" required="" placeholder="Your email address">
+            <button type="submit" id="subscribe" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+        </form>
+    </div>
+</div>
+</footer>
+
+<div class="alert-success alert">You have been successfully subscribed!</div>
+
+
+[
+  {
+    "name": "home-page",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Cart",
+        "selector_type": "href",
+        "selector": "/view_cart",
+        "text": "Cart"
+      }
+    ]
+  },
+  {
+    "name": "cart",
+    "elements": [
+      {
+        "type": "input",
+        "label": "Subscription Email",
+        "selector_type": "id",
+        "selector": "susbscribe_email",
+        "text": ""
+      },
+      {
+        "type": "button",
+        "label": "Subscribe",
+        "selector_type": "id",
+        "selector": "subscribe",
+        "text": ""
+      },
+      {
+        "type": "div",
+        "label": "Success Message",
+        "selector_type": "class",
+        "selector": "alert-success alert",
+        "text": "You have been successfully subscribed!"
+      }
+    ]
+  }
+]

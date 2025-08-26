@@ -1,0 +1,149 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform a full flow from login, adding a product to cart, checking the cart, removing the product from cart and logging out. 
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+login-page:
+
+<input class="input_error form_input" placeholder="Username" type="text" data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none" value="">
+
+<input class="input_error form_input" placeholder="Password" type="password" data-test="password" id="password" name="password" autocorrect="off" autocapitalize="none" value="">
+
+<input type="submit" class="submit-button btn_action" data-test="login-button" id="login-button" name="login-button" value="Login">
+
+
+inventory-page:
+
+<button class="btn btn_primary btn_small btn_inventory " data-test="add-to-cart-sauce-labs-backpack" id="add-to-cart-sauce-labs-backpack" name="add-to-cart-sauce-labs-backpack">Add to cart</button>
+
+<a class="shopping_cart_link" data-test="shopping-cart-link"><span class="shopping_cart_badge" data-test="shopping-cart-badge">1</span></a>
+
+
+cart-page:
+
+<div class="inventory_item_name" data-test="inventory-item-name">Sauce Labs Backpack</div>
+
+<button class="btn btn_secondary btn_small cart_button" data-test="remove-sauce-labs-backpack" id="remove-sauce-labs-backpack" name="remove-sauce-labs-backpack">Remove</button>
+
+<button class="btn btn_secondary back btn_medium" data-test="continue-shopping" id="continue-shopping" name="continue-shopping">Continue Shopping</button>
+
+
+inventory-page-again:
+
+<button type="button" id="react-burger-menu-btn">Open Menu</button>
+
+<a id="logout_sidebar_link" class="bm-item menu-item" href="#" data-test="logout-sidebar-link" style="display: block;">Logout</a>
+
+
+
+{
+  "multi_page_html_contexts": [
+    {
+      "name": "login-page",
+      "elements": [
+        {
+          "type": "input",
+          "label": "Username Field",
+          "selector_type": "data-test",
+          "selector": "username",
+          "text": ""
+        },
+        {
+          "type": "input",
+          "label": "Password Field",
+          "selector_type": "data-test",
+          "selector": "password",
+          "text": ""
+        },
+        {
+          "type": "input",
+          "label": "Login Button",
+          "selector_type": "data-test",
+          "selector": "login-button",
+          "text": "Login"
+        }
+      ]
+    },
+    {
+      "name": "inventory-page",
+      "elements": [
+        {
+          "type": "button",
+          "label": "Add Sauce Labs Backpack to Cart",
+          "selector_type": "data-test",
+          "selector": "add-to-cart-sauce-labs-backpack",
+          "text": "Add to cart"
+        },
+        {
+          "type": "link",
+          "label": "Cart Icon with 1 Item",
+          "selector_type": "data-test",
+          "selector": "shopping-cart-link",
+          "text": ""
+        },
+        {
+          "type": "span",
+          "label": "Cart Badge",
+          "selector_type": "data-test",
+          "selector": "shopping-cart-badge",
+          "text": "1"
+        }
+      ]
+    },
+    {
+      "name": "cart-page",
+      "elements": [
+        {
+          "type": "div",
+          "label": "Item Name in Cart",
+          "selector_type": "data-test",
+          "selector": "inventory-item-name",
+          "text": "Sauce Labs Backpack"
+        },
+        {
+          "type": "button",
+          "label": "Remove Item from Cart",
+          "selector_type": "data-test",
+          "selector": "remove-sauce-labs-backpack",
+          "text": "Remove"
+        },
+        {
+          "type": "button",
+          "label": "Continue Shopping",
+          "selector_type": "data-test",
+          "selector": "continue-shopping",
+          "text": "Continue Shopping"
+        }
+      ]
+    },
+    {
+      "name": "inventory-page-again",
+      "elements": [
+        {
+          "type": "button",
+          "label": "Open Menu Button",
+          "selector_type": "id",
+          "selector": "react-burger-menu-btn",
+          "text": "Open Menu"
+        },
+        {
+          "type": "link",
+          "label": "Logout Link",
+          "selector_type": "data-test",
+          "selector": "logout-sidebar-link",
+          "text": "Logout"
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+

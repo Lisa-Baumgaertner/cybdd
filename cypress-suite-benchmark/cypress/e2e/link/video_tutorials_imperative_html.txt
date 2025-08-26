@@ -1,0 +1,12 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should visit the website and navigate to the Video Tutorials.
+Use the data available in the bdd scenario. 
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<a href="https://www.youtube.com/c/AutomationExercise"><i class="fa fa-youtube-play"></i> Video Tutorials</a>

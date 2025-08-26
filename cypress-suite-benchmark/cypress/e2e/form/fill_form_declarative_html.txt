@@ -1,0 +1,46 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should fill out the form and submit it.
+Fill out the registration form at "https://testpages.eviltester.com/styled/basic-html-form-test.html" by entering the username "JaneDoe", the password "password123", and the comment "Hello world!". 
+Check all three checkboxes that have the values cb1, cb2 and cb3, select radio item 3, choose "Drop Down Item 2" dd2 from the dropdown, and submit the form using the button. 
+Verify that the confirmation message contains "You submitted a form. The details below show the values you entered for processing."
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<input type="text" name="username" size="15">
+
+<input type="password" name="password" size="15">
+
+<textarea cols="40" name="comments" rows="6">Comments...</textarea>
+
+<td>
+    Checkbox Items:<br>
+    <input type="checkbox" name="checkboxes[]" value="cb1">Checkbox 1
+    <input type="checkbox" name="checkboxes[]" value="cb2">Checkbox 2
+    <input type="checkbox" name="checkboxes[]" value="cb3" checked="checked">Checkbox 3
+</td>
+
+<input type="radio" name="radioval" value="rd3">
+
+<select multiple="multiple" name="multipleselect[]" size="4">
+    <option value="ms3">
+        Selection Item 3
+    </option>
+</select>
+
+<select name="dropdown">
+    <option value="dd3">
+        Drop Down Item 3
+    </option>
+</select>
+
+<input type="submit" name="submitbutton" value="submit" class="styled-click-button">
+
+<div class="explanation">
+    <p>You submitted a form. The details below show the values you entered for processing.
+    </p>
+</div>

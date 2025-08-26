@@ -1,0 +1,23 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform sign up for newsletter from homepage by scrolling to footer.
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<footer id="footer">
+<div class="footer-widget">
+    <div class="single-widget">
+        <h2>Subscription</h2>
+        <form class="searchform" method="POST">
+            <input type="email" id="susbscribe_email" required="" placeholder="Your email address">
+            <button type="submit" id="subscribe" class="btn btn-default"><i class="fa fa-arrow-circle-o-right"></i></button>
+        </form>
+    </div>
+</div>         
+</footer>
+
+<div class="alert-success alert">You have been successfully subscribed!</div>
