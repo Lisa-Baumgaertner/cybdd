@@ -19,7 +19,7 @@ import torch
 from huggingface_hub import login
 
 # use your huggingface access token  here
-hf_token="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"
+hf_token=" "
 # login to hf
 login(hf_token)
 
@@ -32,7 +32,7 @@ model_name = "meta-llama/CodeLlama-7b-Instruct-hf"
 # this way the model does not need to be loaded each time the generate function is called
 
 # get adapter you want to use from huggingface
-adapter = "libaum/adapter-rank8-alpha16"
+adapter = "libaum/adapter-rank32-alpha128_final"
 
 peft_configuration = PeftConfig.from_pretrained(adapter)
 
@@ -136,26 +136,17 @@ context_value = ""
 with gr.Blocks(theme=theme) as demo:
 
     gr.Markdown("# <center> Generator for Cypress </center>")
-    gr.Markdown("## <center> Lorem Ipsum </center>")
 
     with gr.Row():
         #  create building blocks
         with gr.Column():
-            instruction = gr.Textbox(label="Instruction", lines=4)
-            bdd_input = gr.Textbox(label="BDD Scenario", lines=8)
+            instruction = gr.Textbox(label="Instruction", lines=4, html_attributes={"spellcheck": "false"})
+            bdd_input = gr.Textbox(label="BDD Scenario", lines=8, html_attributes={"spellcheck": "false"})
             radio = gr.Radio(["single page", "multi page"], label="HTML Context Type", info="What kind of html context do you want to use?")
             radio_style = gr.Radio(["imperative", "declarative"], label="BDD Scenario Style", info="What kind of bdd style do you want to use?")
-
-            def get_select_val(evt: gr.SelectData):
-                return evt.value
-
-            radio.select(get_select_val)
-            radio_style.select(get_select_val)
-
-
-            html_input = gr.Textbox(label="HTML Context", lines=11)
+            html_input = gr.Textbox(label="HTML Context", lines=11, html_attributes={"spellcheck": "false"})
         with gr.Column():
-            cypress_code = gr.Textbox(label="Cypress Code", lines=35)
+            cypress_code = gr.Textbox(label="Cypress Code", lines=40)
 
 
     clear = gr.Button("Clear all fields", variant="secondary")
