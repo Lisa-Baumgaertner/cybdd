@@ -50,20 +50,6 @@ for d in dataset:
         counter_temp = 0
 
         for name in d["multi_page_html_contexts"]:
-            #print(name.get('name'))
-            #print("Type of `name`:", type(name))
-            #print("Value of `name`:", name.get('name'))
-
-            # if isinstance(name, dict):
-            #     name_temp = name.get("name", "UNKNOWN")
-            #
-            #     print(str(counter_temp) + ' in if: ' + name_temp)
-            #     counter_temp += 1
-            # else:
-            #     name_temp = str(name)
-            #     print(str(counter_temp) + ' in else: ' + name_temp)
-            #     counter_temp += 1
-            #name_temp = name.get('name')
             flatten_multi_contexts += "Page title: " + name.get('name') + "\n"
             #print(flatten_multi_contexts)
             for el in name["elements"]:
@@ -74,13 +60,11 @@ for d in dataset:
                 sel = el.get("selector", "unknown_sel")
                 text = el.get("text", "unknown_label")
 
-
                 build_string = element_type + " [" + sel_type + "=" + '"' + sel + '"]'
 
                 if text:
                     build_string += " with text " + text 
                     
-
                 flatten_multi_contexts += build_string + '\n'
 
                 if "children" in el:
@@ -116,8 +100,6 @@ for d in dataset:
         new_prompt = f"<s>[INST] {instruction}\n\n#### Style\n{style}\n\n#### HTML Multi-Page Context\n{flatten_multi_contexts}\n\n#### BDD Scenario\n{bdd_scenario} [/INST]"
         # Neues Output Feld + Sequenzende signalisieren
         new_completion = cy_code.strip() + " </s>"
-
-        
 
         # Zu neuer Liste zusammenfügen
         to_save.append({"prompt": new_prompt, "completion": new_completion})
