@@ -9,7 +9,7 @@ In the following the folder structure and its contents are explained.
 
 ### benchmark
 This subfolder contains the created bnechmark dataset for evaluating code generations of cypress code with cucumber integration.
-Also the 50-sample subset of the ``AdvBench``-dataset by Zou et al. 2023 (https://doi.org/10.48550/arXiv.2307.15043).
+Also the 50-sample subset of the AdvBench-dataset by Zou et al. 2023 (https://doi.org/10.48550/arXiv.2307.15043).
 
 ### evaluation
 This subfolder contains the code used for evaluating the code generations.
@@ -17,7 +17,7 @@ One file contains all of the functions to calculated popular scores like CodeBLE
 The other file contains the custom code for calculating the CYBDD-score.
 
 ### inference
-This subfolder contains code to perform batch inferences for the trained adapters using the benchmark dataset, the ``AdvBench``-dataset and the base model.
+This subfolder contains code to perform batch inferences for the trained adapters using the benchmark dataset, the AdvBench-dataset and the base model.
 
 ### preprocessing
 This subfolder contains the code to bring the training dataset into the required format.
