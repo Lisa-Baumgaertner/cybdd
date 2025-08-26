@@ -9,12 +9,12 @@ def pip_install(package_list):
 
 def hf_log_in():
     from huggingface_hub import login
-    hf_token="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"
+    # your own token here
+    hf_token=" "
     login(hf_token)
 
 
 def batch_inference(modelnaming):
-    #import gradio as gr
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     from peft import PeftModel, PeftConfig
     import pandas as pd
