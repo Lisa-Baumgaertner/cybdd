@@ -3,7 +3,7 @@
 
 
 ## Overview
-This repository contains the code and datasets used for this thesis.
+This repository contains the code (in multiple scripts) and datasets used for this thesis.
 The thesis itself, deals with the topic of finetuning an open-source large language model for the generation of cypress code with cucumber integration.
 In the following the folder structure and its contents are explained.
 
