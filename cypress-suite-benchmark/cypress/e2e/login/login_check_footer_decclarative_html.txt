@@ -1,0 +1,118 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should be performed on the website "https://www.saucedemo.com/". 
+The test should perform check for social icons in footer. 
+The data for username should be "standard_user", the password "secret_sauce" and the inventory page should be under "/inventory".
+The textx for the social icons should be "Twitter" for twitter, "Facebook" for facebook and "LinkedIn" for linkedin. 
+The login page should be indicated by the url "https://www.saucedemo.com/".
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+login-page:
+
+<input class="input_error form_input" placeholder="Username" type="text" data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none" value="">
+
+<input class="input_error form_input" placeholder="Password" type="password" data-test="password" id="password" name="password" autocorrect="off" autocapitalize="none" value="">
+
+<input type="submit" class="submit-button btn_action" data-test="login-button" id="login-button" name="login-button" value="Login">
+
+
+home-page:
+<footer class="footer" data-test="footer">
+    <ul class="social">
+        <li class="social_twitter">
+            <a href="https://twitter.com/saucelabs" target="_blank" rel="noreferrer" data-test="social-twitter">Twitter</a>
+        </li>
+        <li class="social_facebook">
+            <a href="https://www.facebook.com/saucelabs" target="_blank" rel="noreferrer" data-test="social-facebook">Facebook</a>
+        </li>
+        <li class="social_linkedin">
+            <a href="https://www.linkedin.com/company/sauce-labs/" target="_blank" rel="noreferrer" data-test="social-linkedin">LinkedIn</a>
+        </li>
+    </ul>
+</footer>
+
+
+<button type="button" id="react-burger-menu-btn">Open Menu</button>
+
+side-menu:
+<a id="logout_sidebar_link" class="bm-item menu-item" href="#" data-test="logout-sidebar-link">Logout</a>
+
+
+
+
+{
+  "login-page": [
+    {
+      "type": "input",
+      "label": "Username Field",
+      "selector_type": "data-test",
+      "selector": "username",
+      "text": ""
+    },
+    {
+      "type": "input",
+      "label": "Password Field",
+      "selector_type": "data-test",
+      "selector": "password",
+      "text": ""
+    },
+    {
+      "type": "input",
+      "label": "Login Button",
+      "selector_type": "data-test",
+      "selector": "login-button",
+      "text": "Login"
+    }
+  ],
+  "home-page": [
+    {
+      "type": "footer",
+      "label": "Footer",
+      "selector_type": "data-test",
+      "selector": "footer",
+      "text": ""
+    },
+    {
+      "type": "a",
+      "label": "Twitter Link",
+      "selector_type": "data-test",
+      "selector": "social-twitter",
+      "text": "Twitter"
+    },
+    {
+      "type": "a",
+      "label": "Facebook Link",
+      "selector_type": "data-test",
+      "selector": "social-facebook",
+      "text": "Facebook"
+    },
+    {
+      "type": "a",
+      "label": "LinkedIn Link",
+      "selector_type": "data-test",
+      "selector": "social-linkedin",
+      "text": "LinkedIn"
+    },
+    {
+      "type": "button",
+      "label": "Menu Button",
+      "selector_type": "id",
+      "selector": "react-burger-menu-btn",
+      "text": "Open Menu"
+    }
+  ],
+  "side-menu": [
+    {
+      "type": "a",
+      "label": "Logout Link",
+      "selector_type": "data-test",
+      "selector": "logout-sidebar-link",
+      "text": "Logout"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform a failing search on "https://en.wikipedia.org/" for the search term "nonexistent12345678".
+The failed search should be indicated by text "There were no results matching the query".
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<span class="vector-icon mw-ui-icon-search mw-ui-icon-wikimedia-search"></span>
+
+<input class="cdx-text-input__input" search-results-label="Search results" placeholder="Search Wikipedia" aria-label="Search Wikipedia" name="search" type="search" size="1">
+
+<button class="cdx-button cdx-button--action-default cdx-button--weight-normal cdx-button--size-medium cdx-button--framed cdx-search-input__end-button">Search</button>
+
+<p class="mw-search-nonefound">There were no results matching the query.</p>

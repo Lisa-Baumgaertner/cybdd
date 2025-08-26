@@ -1,0 +1,19 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform a failing login. 
+In the test, the user visits the website https://saucedemo.com,
+enters the username “locked_out_user” and the password “secret_sauce”, then attempts to log in using the button, and the error message is visible.
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<input class="input_error form_input" placeholder="Username" type="text" data-test="username" id="user-name" name="user-name" autocorrect="off" autocapitalize="none" value="">
+
+<input class="input_error form_input" placeholder="Password" type="password" data-test="password" id="password" name="password" autocorrect="off" autocapitalize="none" value="">
+
+<input type="submit" class="submit-button btn_action" data-test="login-button" id="login-button" name="login-button" value="Login">
+
+<h3 data-test="error"><button class="error-button" data-test="error-button"></button>Epic sadface: Sorry, this user has been locked out.</h3>

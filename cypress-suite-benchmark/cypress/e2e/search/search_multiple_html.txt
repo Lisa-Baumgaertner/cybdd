@@ -1,0 +1,15 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should perform a search for multiple different media items.
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<input type="text" autocomplete="off" id="suggestion-search" data-testid="suggestion-search" name="q" placeholder="IMDb durchsuchen">
+
+<button id="suggestion-search-button" type="submit" aria-label="Suche absenden" class="nav-search__search-submit searchform__submit"></button>
+
+<h1 class="sc-4c6d853-0 gGHeXM">Suchen nach „the office“</h1>

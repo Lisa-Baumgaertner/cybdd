@@ -1,0 +1,22 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should be performed on the website "https://automationexercise.com/".
+The test should check the top bar navigation for presence of all 8 li items and their texts.
+The texts hould be "Home", "Products", "Cart", "Signup / Login", " Test Cases", "API Testing", "Video Tutorials" and "Contact us".
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<ul class="nav navbar-nav">
+    <li><a href="/" style="color: orange;"><i class="fa fa-home"></i> Home</a></li>
+    <li><a href="/products"><i class="material-icons card_travel" style="font-size: 16px;"></i> Products</a></li>
+    <li><a href="/view_cart"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+    <li><a href="/login"><i class="fa fa-lock"></i> Signup / Login</a></li>
+    <li><a href="/test_cases"><i class="fa fa-list"></i> Test Cases</a></li>
+    <li><a href="/api_list"><i class="fa fa-list"></i> API Testing</a></li>
+    <li><a href="https://www.youtube.com/c/AutomationExercise"><i class="fa fa-youtube-play"></i> Video Tutorials</a></li>
+    <li><a href="/contact_us"><i class="fa fa-envelope"></i> Contact us</a></li>  
+</ul>

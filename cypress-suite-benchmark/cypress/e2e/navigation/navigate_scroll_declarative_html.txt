@@ -1,0 +1,25 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should navigate down to footer and use scrolling function to move back up.
+Use the website "http://automationexercise.com" to perform the test on.
+The homepage should contain the text "Full-Fledged practice website for Automation Engineers".
+The subscription part should contain the text "Subscription"
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<div class="col-sm-6">
+    <h1><span>Automation</span>Exercise</h1>
+    <h2>Full-Fledged practice website for Automation Engineers</h2>
+</div>
+
+<footer id="footer">
+    <div class="single-widget">
+        <h2>Subscription</h2>
+    </div>				
+</footer>
+
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"><i class="fa fa-angle-up"></i></a>

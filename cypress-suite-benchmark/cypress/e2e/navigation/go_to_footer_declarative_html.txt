@@ -1,0 +1,21 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should go to footer and check for social icons. 
+The website "https://www.bergfreunde.de/" should be visited for this test. 
+The test should scroll to footer, then check for visibility for the instagram icon, the youtube icon and the podcast icon. 
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<footer id="footer">
+    <div class="row social !pt-4.5" data-codecept="footerSocialItem">
+        <a class="social-link" href="https://www.instagram.com/bergfreunde" title="Folge uns auf Instagram!" target="_blank" rel="nofollow" data-mapp-click="footer.social.instagram" data-codecept="ig-icon"><i class="icon ig" data-codecept="ig-icon"></i></a>
+        <a class="social-link" href="https://www.youtube.com/channel/UCl5nIYjIB2VwWoMHh2hgMQg" title="Folge uns auf Youtube!" target="_blank" rel="nofollow" data-mapp-click="footer.social.youtube"><i class="icon yt" data-codecept="yt-icon"></i></a>
+        <a class="social-link" href="https://www.bergfreunde.de/blog/category/bergfreunde/podcast/" title="Hör rein in unseren Bergfreunde Outdoor-Podcast!" target="_blank" data-mapp-click="footer.social.podcast"><i class="icon pc" data-codecept="pc-icon"></i></a>
+    </div>
+</footer>
+    
+            

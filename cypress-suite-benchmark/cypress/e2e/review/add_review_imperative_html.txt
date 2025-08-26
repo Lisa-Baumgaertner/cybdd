@@ -1,0 +1,106 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should visit the website and leave a review for a product.
+Use the data available in the bdd scenario. 
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context (multipage):
+
+homepage:
+<a href="/products"><i class="material-icons card_travel" style="font-size: 16px;"></i> Products</a>
+  
+
+product page:
+<a href="/product_details/1" style="color: brown;"><i class="fa fa-plus-square"></i>View Product</a>
+
+
+detail page: 
+<a href="#reviews" data-toggle="tab">Write Your Review</a>
+
+<input type="text" id="name" required="" placeholder="Your Name">
+<input type="email" id="email" required="" placeholder="Email Address">
+<textarea name="review" placeholder="Add Review Here!" id="review" required=""></textarea>
+
+<button type="submit" id="button-review" class="btn btn-default pull-right">Submit</button>
+
+<div class="alert-success alert">
+	<span style="font-size: 20px;">Thank you for your review.</span>
+</div>
+
+
+[
+  {
+    "name": "homepage",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Products",
+        "selector_type": "href",
+        "selector": "/products",
+        "text": "Products"
+      }
+    ]
+  },
+  {
+    "name": "product-page",
+    "elements": [
+      {
+        "type": "link",
+        "label": "View Product for First Product",
+        "selector_type": "href",
+        "selector": "/product_details/1",
+        "text": "View Product"
+      }
+    ]
+  },
+  {
+    "name": "product-detail-page",
+    "elements": [
+      {
+        "type": "link",
+        "label": "Write Your Review Section Link",
+        "selector_type": "href",
+        "selector": "#reviews",
+        "text": "Write Your Review"
+      },
+      {
+        "type": "input",
+        "label": "Name Field",
+        "selector_type": "id",
+        "selector": "name",
+        "text": ""
+      },
+      {
+        "type": "input",
+        "label": "Email Field",
+        "selector_type": "id",
+        "selector": "email",
+        "text": ""
+      },
+      {
+        "type": "textarea",
+        "label": "Review Textarea",
+        "selector_type": "id",
+        "selector": "review",
+        "text": ""
+      },
+      {
+        "type": "button",
+        "label": "Submit Review",
+        "selector_type": "id",
+        "selector": "button-review",
+        "text": "Submit"
+      },
+      {
+        "type": "message",
+        "label": "Review Submission Success Message",
+        "selector_type": "class",
+        "selector": "alert-success alert",
+        "text": "Thank you for your review."
+      }
+    ]
+  }
+]

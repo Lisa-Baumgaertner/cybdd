@@ -1,0 +1,19 @@
+Natural Language Instruction:
+
+Write a Cucumber test using Cypress from the following BDD scenario and html context. 
+The test should be performed on the website "https://opencart.abstracta.us".
+The test should perform a succesful search.
+The search term to enter into the search bar is "MacBook". This text "MacBook" should also be contained in content after submitting. 
+Wherever available make sure to use data-* selectors to access elements. 
+
+
+
+HTML context:
+
+<input type="text" name="search" value="" placeholder="Search" class="form-control input-lg">
+
+<button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
+
+<div id="content" class="col-sm-12">
+    <h1>Search - MacBook</h1>
+</div>
