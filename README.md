@@ -9,7 +9,7 @@ In the following the folder structure and its contents are explained.
 
 ### reqs
 This folder contains the requirements file that can be used to install the necessary dependencies.
-Use: ``pip install reqs/requirements.txt``
+Use: ``pip install -r reqs/requirements.txt``
 
 
 ### benchmark
@@ -44,7 +44,7 @@ Also contains the preprocessed dataset.
 This subfolder contains the training dataset which was created using a commercial llm.
 
 ### training
-This subfodler contains the training / finetuning code.
+This subfolder contains the training / finetuning code.
 
 ### ui
 This subfolder contains the code for a gradio ui, which can be run with enough ressources.
