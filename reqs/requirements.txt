@@ -12,3 +12,7 @@ tree-sitter==0.23.2
 tree-sitter-javascript==0.23.1
 codebleu @ git+https://github.com/k4black/codebleu.git@b0edb622f6a52fe9d1edc407be5061d3e1462a7f
 numpy==2.2.6
+absl-py==2.3.1
+rouge_score==0.1.2
+nltk==3.9.1
+
