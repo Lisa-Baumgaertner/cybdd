@@ -190,9 +190,9 @@ def calculate_codebleu_score(path_benchmark, path_output, prediction_column):
 def main():
 
 
-    #calculate_bleu_score("benchmark\\benchmark_ds.xlsx", "TEST_code_bleu.xlsx", "qwen2.5-coder")
-    #calculate_rougel_score("benchmark\\benchmark_ds.xlsx", "TEST_code_bleu.xlsx", "wavecoder-ultra")
-    calculate_codebleu_score("benchmark\\benchmark_ds.xlsx", "TEST_code_bleu.xlsx", "wavecoder-ultra")
+    #calculate_bleu_score("benchmark/benchmark_ds.xlsx", "TEST_bleu.xlsx", "qwen2.5-coder")
+    #calculate_rougel_score("benchmark/benchmark_ds.xlsx", "TEST_rougel.xlsx", "wavecoder-ultra")
+    calculate_codebleu_score("benchmark/benchmark_ds.xlsx", "TEST_code_bleu.xlsx", "wavecoder-ultra")
 
 
 
