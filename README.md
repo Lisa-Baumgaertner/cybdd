@@ -43,6 +43,7 @@ This subfodler contains the training / finetuning code.
 
 ### ui
 This subfolder contains the code for a gradio ui, which can be run with enough ressources.
+It is recommended to use GPU ressources, such as RunPod, otherwise inference might not work or be very slow. 
 
 
 ### cypress suite
