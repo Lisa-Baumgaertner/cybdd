@@ -32,7 +32,7 @@ login(hf_token)
 
 
 # load the training dataset
-dataset = load_dataset("json", data_files="data/dataset_preprocessed.jsonl")["train"] 
+dataset = load_dataset("json", data_files="preprocessing/dataset_preprocessed.jsonl")["train"] 
 # split dataset into training and evaluation set
 dataset = dataset.train_test_split(test_size=0.1, seed=42)
 # make sure to shuffle the dataset incase there are similarities etc. due to generation with commercial llm
