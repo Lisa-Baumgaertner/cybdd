@@ -69,7 +69,7 @@ def batch_inference():
 
 
     # file path of the adv benchmark dataset to load
-    file_path = "adv_bench_samples.xlsx"
+    file_path = "benchmark\\adv_bench_samples.xlsx"
 
     # get specific column containing the prompts in the adv bench dataset
     # A: prompt
