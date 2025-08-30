@@ -43,7 +43,7 @@ def calculate_score(path_benchmark, path_output, column):
 
 
 def main():
-    calculate_score("benchmark\\benchmark_ds.xlsx", "cy_score_TEST.xlsx", "wavecoder-ultra")
+    calculate_score("benchmark/benchmark_ds.xlsx", "cy_score_TEST.xlsx", "wavecoder-ultra")
 
 if __name__ == "__main__":
     main()
