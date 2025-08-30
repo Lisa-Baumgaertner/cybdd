@@ -4,7 +4,7 @@
 import json
 
 # Datenset laden
-with open ("C:\\Users\\Uni\\Desktop\\cy_bdd_final_dataset_multipage_included.jsonl", "r", encoding="utf-8") as file:
+with open ("dataset\\cy_bdd_final_dataset_multipage_included.jsonl", "r", encoding="utf-8") as file:
     dataset = [json.loads(zeile) for zeile in file]
 
 
@@ -107,7 +107,7 @@ for d in dataset:
 
 # speichern als JSONL wieder
 # es muss w+ verwendet werden, falls Datei noch nicht existiert
-with open("C:\\Users\\Uni\\Downloads\\dataset_preprocessed.jsonl", "w+", encoding="utf-8") as file:
+with open("dataset_preprocessed.jsonl", "w+", encoding="utf-8") as file:
     for sample in to_save:
         file.write(json.dumps(sample) + "\n")
 
