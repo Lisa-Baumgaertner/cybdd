@@ -10,6 +10,18 @@ In the following the folder structure and its contents are explained.
 ### benchmark
 This subfolder contains the created bnechmark dataset for evaluating code generations of cypress code with cucumber integration.
 Also the 50-sample subset of the AdvBench-dataset by Zou et al. 2023 (https://doi.org/10.48550/arXiv.2307.15043).
+The benchmark dataset file (benchmark_ds.xlsx) contains multiple Sheets:
+- ``benchmark:``
+- ``gpt-4o:``
+- ``gemini-2.5-flash:``
+- ``code-llama-base:``
+- ``deepseek-coder-6.7:``
+- ``r8a16:``
+- ``r8a32:``
+- ``r16a64:``
+- ``r32a128:``
+- ``qwen2.5-coder:``
+- ``wavecoder-ultra:``
 
 ### evaluation
 This subfolder contains the code used for evaluating the code generations.
