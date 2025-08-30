@@ -25,7 +25,7 @@ from huggingface_hub import login
 
 
 # use your own huggingface access token here
-hf_token="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"
+hf_token=" "
 # perform login on huggingface
 # required to load model, push adapters etc.
 login(hf_token)
