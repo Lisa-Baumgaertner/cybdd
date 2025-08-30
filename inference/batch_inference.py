@@ -47,7 +47,7 @@ def batch_inference(modelnaming):
     )
 
 
-    file_path = "benchmark\\benchmark_ds.xlsx"
+    file_path = "benchmark/benchmark_ds.xlsx"
 
     # get specific columns
     # E = instruction
