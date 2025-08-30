@@ -4,7 +4,7 @@
 import json
 
 # Datenset laden
-with open ("dataset\\cy_bdd_final_dataset_multipage_included.jsonl", "r", encoding="utf-8") as file:
+with open ("dataset/cy_bdd_final_dataset_multipage_included.jsonl", "r", encoding="utf-8") as file:
     dataset = [json.loads(zeile) for zeile in file]
 
 
