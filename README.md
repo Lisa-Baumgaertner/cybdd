@@ -7,6 +7,11 @@ This repository contains the code (in multiple scripts) and datasets used for th
 The thesis itself, deals with the topic of finetuning an open-source large language model for the generation of cypress code with cucumber integration.
 In the following the folder structure and its contents are explained.
 
+### reqs
+This folder contains the requirements file that can be used to install the necessary dependencies.
+Use: ``pip install reqs/requirements.txt``
+
+
 ### benchmark
 This subfolder contains the created bnechmark dataset for evaluating code generations of cypress code with cucumber integration.
 Also the 50-sample subset of the AdvBench-dataset by Zou et al. 2023 (https://doi.org/10.48550/arXiv.2307.15043).
