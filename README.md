@@ -15,7 +15,7 @@ Use: ``pip install -r reqs/requirements.txt``
 
 
 ### benchmark
-This subfolder contains the created bnechmark dataset for evaluating code generations of cypress code with cucumber integration.
+This subfolder contains the created benchmark dataset with 52 samples for evaluating code generations of cypress code with cucumber integration.
 Also the 50-sample subset of the AdvBench-dataset by Zou et al. 2023 (https://doi.org/10.48550/arXiv.2307.15043).
 The benchmark dataset file (benchmark_ds.xlsx) contains multiple Sheets:
 - ``benchmark:`` Contains the actual benchmark samples with the instruction, the bdd scenario. cypress code and html context.
