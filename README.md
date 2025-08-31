@@ -4,7 +4,8 @@
 
 ## Overview
 This repository contains the code (in multiple scripts) and datasets used for this thesis.
-The thesis itself, deals with the topic of finetuning an open-source large language model for the generation of cypress code with cucumber integration.
+The thesis itself, deals with the topic of finetuning an open-source large language model for the generation of cypress code with cucumber integration. For running the generated cypress code with cucumber integration, cypress needs to be installed (https://docs.cypress.io/app/get-started/install-cypress). Also the cypress cucumber preprocessor needs to be isntalled and set up (https://www.browserstack.com/guide/cypress-cucumber-preprocessor).
+
 In the following the folder structure and its contents are explained.
 
 ### reqs
