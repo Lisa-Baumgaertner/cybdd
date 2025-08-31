@@ -50,6 +50,3 @@ This subfolder contains the training / finetuning code.
 This subfolder contains the code for a gradio ui, which can be run with enough ressources.
 It is recommended to use GPU ressources, such as RunPod, otherwise inference might not work or be very slow. 
 
-
-### cypress suite
-This subfolder contains all of the cypress tests that make up the benchmark dataset with their repsective bdd feature files in gherkin syntax.
