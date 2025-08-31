@@ -10,6 +10,7 @@ In the following the folder structure and its contents are explained.
 
 ### reqs
 This folder contains the requirements file that can be used to install the necessary dependencies.
+
 Use: ``pip install -r reqs/requirements.txt``
 
 
