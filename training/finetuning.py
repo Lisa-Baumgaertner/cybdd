@@ -123,16 +123,11 @@ training_arguments = SFTConfig(
 # use the tokenizer, parameters and lora config
 # uses completion_loss by default 
 # use the previously split datasets
-# 
 trainer = SFTTrainer(
     model=model,
     processing_class=tokenizer,
     args=training_arguments,
-    #max_seq_length=2048,
     peft_config=my_lora_config,
-    #train_on_completion_only=True,
-    #response_template="[/INST] ",
-    #formatting_func=format_the_data,
     train_dataset=training_dataset, # data used for finetuning/training
     eval_dataset=evaluation_dataset, # data used for evaluation
     # stops the finetuning early if validation metric doesnt improve for 2 checks after another
@@ -145,7 +140,7 @@ trainer = SFTTrainer(
 trainer.train()
 
 
-# Speichern
+# Save adapter
 model.save_pretrained("/workspace/output/rank32-alpha128") # saves configuration and weights of adapters to specified path 
 tokenizer.save_pretrained("/workspace/output")
 
