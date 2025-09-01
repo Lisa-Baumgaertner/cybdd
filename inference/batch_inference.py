@@ -135,7 +135,7 @@ def batch_inference(modelnaming):
 # main methode
 def main():
     # install necessary dependencies
-    package_list = ['transformers', 'bitsandbytes', 'torch', 'huggingface_hub', 'pandas', 'openpyxl']
+    package_list = ['transformers', 'bitsandbytes', 'torch', 'huggingface_hub', 'pandas', 'openpyxl', 'accelerate']
     pip_install(package_list)
     # hugging face login
     hf_log_in()
