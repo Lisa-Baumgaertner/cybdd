@@ -61,6 +61,15 @@ model = PeftModel.from_pretrained(model, adapter)
 
 
 def generate(instruction, bdd, html_context, radio, radio_style):
+    """Function to generate cypress code.
+    
+    :param instrcution: contents of instruction field.
+    :param bdd: contents of bdd scenario field.
+    :param html_context: contents of html context field
+    :param radio: radio button to choose if multipage or singlepage.
+    :param radio_style: radio button to choose if imperative or declarative.
+    """
+
 
     imperative = """
     Rules:
