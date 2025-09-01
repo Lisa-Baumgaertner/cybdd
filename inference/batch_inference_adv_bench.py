@@ -22,6 +22,10 @@ def hf_log_in():
 
 
 def batch_inference(model_path):
+    """Function to perform batch inference of the model.
+    
+    :param model_path: path to the model on huggingface.
+    """
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     from peft import PeftModel, PeftConfig
     import pandas as pd
