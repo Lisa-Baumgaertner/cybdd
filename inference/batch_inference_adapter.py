@@ -4,6 +4,10 @@ import sys
 
 
 def pip_install(package_list):
+    """Function to install necessary packages.
+    
+    :param package_list: the list of packages to be installed.
+    """
     for package in package_list:
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
