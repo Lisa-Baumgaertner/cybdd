@@ -14,14 +14,14 @@ def hf_log_in():
     login(hf_token)
 
 
-def batch_inference():
+def batch_inference(model_path):
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     from peft import PeftModel, PeftConfig
     import pandas as pd
 
 
     # set model
-    model_name = "meta-llama/CodeLlama-7b-Instruct-hf"
+    model_name = model_path
 
     # set adapter
     adapter = "libaum/adapter-rank32-alpha128_final"
@@ -103,7 +103,7 @@ def main():
     # hugging face login
     hf_log_in()
     # inference function
-    batch_inference()
+    batch_inference("meta-llama/CodeLlama-7b-Instruct-hf")
 
 if __name__ == '__main__':
     sys.exit(main())
