@@ -22,7 +22,7 @@ def batch_inference(modelnaming):
 
     model_name = "meta-llama/CodeLlama-7b-Instruct-hf"
 
-
+    # load model
     model = AutoModelForCausalLM.from_pretrained(
         model_name,
         device_map="auto",
@@ -30,20 +30,21 @@ def batch_inference(modelnaming):
         trust_remote_code=True
     )
 
-
+    # load tokenizer for model
     tokenizer = AutoTokenizer.from_pretrained(model_name)
     tokenizer.pad_token = tokenizer.eos_token
 
 
     model.eval()
 
+    # generation pipeline
     generate_cy = pipeline(
         "text-generation",
         model=model,
         tokenizer=tokenizer,
         max_new_tokens=600,
         do_sample=False,
-        return_full_text=False # sicherstellen, dass nur Generierung und nicht ganzer Prompt mit
+        return_full_text=False # only generation not including prompt
     )
 
 
@@ -60,6 +61,7 @@ def batch_inference(modelnaming):
     output = []
     for index, row in data.iterrows():
         output = []
+        # if multi page sample, create correct structure 
         if row['multi_page'] == 'yes':
             try:
                 pages = json.loads(row['html_context'])  # List of page dicts
@@ -99,6 +101,7 @@ def batch_inference(modelnaming):
                     prompt = "<s>[INST] " + row['instruction'] + '\n' + "#### HTML Multi-Page Context" + '\n' + html_context_str + '\n' + "#### BDD Scenario" + '\n' + row['bdd_scenario'] + " [/INST]"
                     prompt_list.append(prompt)
                 else:
+                    # build slightly different prompt for deepseek model
                     prompt = "### Instruction: " + row['instruction'] + '\n' + "HTML Multi-Page Context" + '\n' + html_context_str + '\n' + "BDD Scenario" + '\n' + row['bdd_scenario'] + '\n' + "### Response:"
                     prompt_list.append(prompt)
 
