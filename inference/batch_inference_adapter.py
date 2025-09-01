@@ -22,6 +22,11 @@ def hf_log_in():
 
 
 def batch_inference(model_path, modelnaming):
+    """Function to perform batch inference of the model.
+    
+    :param model_path: path to the model on huggingface.
+    :param modelnaming: naming can be either llama or deepseek to signal which prompt build should be used.
+    """
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     from peft import PeftModel, PeftConfig
     import pandas as pd
