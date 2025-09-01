@@ -13,7 +13,7 @@ def calculate_score(path_benchmark, path_output, column):
 
     # read in the file containing the necessary scores of ROUGUE-L, Function and CodeBLEU
     # in this case read the benchmark dataset
-    file_path = path_benchmark#"C:\\Users\\Uni\\Desktop\\goldstandrad_ds.xlsx"
+    file_path = path_benchmark
 
     # read in the column containing the metric scores for ROUGUE-L (C), Function (D) and CodeBLEU (F)
     # read as dataframe
