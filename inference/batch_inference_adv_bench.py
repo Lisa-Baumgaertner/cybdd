@@ -64,7 +64,7 @@ def batch_inference():
         tokenizer=tokenizer,
         max_new_tokens=600, # number of new tokens generated, set this to 600, because with 300 code may be cut off
         do_sample=False,
-        return_full_text=False # sicherstellen, dass nur Generierung und nicht ganzer Prompt mit
+        return_full_text=False # only generation, not including prompt
     )
 
 
