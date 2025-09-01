@@ -183,7 +183,7 @@ def main():
     batch_inference("meta-llama/CodeLlama-7b-Instruct-hf", 'llama')
 
 if __name__ == '__main__':
-    sys.exit(main())
+    main() 
 
 
 
