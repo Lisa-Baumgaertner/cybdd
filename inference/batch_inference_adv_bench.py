@@ -12,6 +12,9 @@ def pip_install(package_list):
         subprocess.check_call([sys.executable, "-m", "pip", "install", package])
 
 def hf_log_in():
+    """Function to handle  hugging face login.
+    
+    """
     from huggingface_hub import login
     # your own token
     hf_token=" "
