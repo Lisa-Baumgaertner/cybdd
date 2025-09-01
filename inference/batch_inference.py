@@ -13,14 +13,14 @@ def hf_log_in():
     login(hf_token)
 
 
-def batch_inference(modelnaming):
+def batch_inference(model_path, modelnaming):
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     import torch
     import pandas as pd
     import json
 
 
-    model_name = "meta-llama/CodeLlama-7b-Instruct-hf"
+    model_name = model_path 
 
     # load model
     model = AutoModelForCausalLM.from_pretrained(
@@ -140,7 +140,7 @@ def main():
     # hugging face login
     hf_log_in()
     # inference function
-    batch_inference('llama')
+    batch_inference("meta-llama/CodeLlama-7b-Instruct-hf", 'llama')
 
 if __name__ == '__main__':
     sys.exit(main())  
