@@ -2,7 +2,8 @@ import subprocess
 import sys
 
 def pip_install(package_list):
-    """Function to install necessary packages
+    """Function to install necessary packages.
+    
     :param package_list: the list of packages to be installed.
     """
     for package in package_list:
@@ -10,6 +11,9 @@ def pip_install(package_list):
 
 
 def hf_log_in():
+    """Function to handle  hugging face login.
+    
+    """
     from huggingface_hub import login
     # use your own token here
     hf_token=" "
@@ -17,6 +21,11 @@ def hf_log_in():
 
 
 def batch_inference(model_path, modelnaming):
+    """Function to perform batch inference of the model.
+    
+    :param model_path: path to the model on huggingface.
+    :param modelnaming: naming can be either llama or deepseek to signal which prompt build should be used.
+    """
     from transformers import AutoTokenizer, AutoModelForCausalLM, BitsAndBytesConfig, pipeline
     import torch
     import pandas as pd
