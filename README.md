@@ -37,6 +37,9 @@ The other file contains the custom code for calculating the CYBDD-score.
 
 ### inference
 This subfolder contains code to perform batch inferences for the trained adapters using the benchmark dataset, the AdvBench-dataset and the base model.
+- ``batch_inference`` is for inference on the base model
+- ``batch_inference_adapter`` is for inference using the adapter
+- ``batch_inference_adv_bench`` is for inference using the adv benchmark samples
 
 ### preprocessing
 This subfolder contains the code to bring the training dataset into the required format.
