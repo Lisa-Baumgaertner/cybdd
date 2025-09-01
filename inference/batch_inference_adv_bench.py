@@ -98,7 +98,7 @@ def batch_inference():
 # main methode
 def main():
     # install necessary dependencies
-    package_list = ['transformers', 'peft', 'bitsandbytes', 'torch', 'huggingface_hub', 'pandas', 'openpyxl']
+    package_list = ['transformers', 'peft', 'bitsandbytes', 'torch', 'huggingface_hub', 'pandas', 'openpyxl', 'accelerate']
     pip_install(package_list)
     # hugging face login
     hf_log_in()
